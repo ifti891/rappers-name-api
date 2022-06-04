@@ -4,7 +4,7 @@ const app = express()
 const cors = require('cors')
 const PORT = 8000
 
-
+// cors (download npm install cors --save)
 app.use(cors)
 
 const rappers = {
@@ -25,12 +25,13 @@ const rappers = {
     'birthName': 'unknown',
     'birthLocation': 'unknown'
   }
-
 }
+
+
 
 app.get('/', (req, res) => {
   res.sendFile(__dirname + '/index.html')
-})
+});
 
 app.get('/api/:name', (req, res) => {
 
